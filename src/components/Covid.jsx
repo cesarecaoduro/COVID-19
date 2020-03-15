@@ -3,6 +3,7 @@ import axios from 'axios';
 import {groupBy} from 'lodash';
 
 import {readString} from 'react-papaparse';
+import NationalData from './charts/NationalData';
 
 export default class Covid extends React.Component{
     constructor(){
@@ -99,8 +100,9 @@ export default class Covid extends React.Component{
 
     render(){
         return (
-            <div>
-            </div>
+            <>
+            <NationalData data={this.state.dailyItaly}/>
+            </>
         )
     }
 }
